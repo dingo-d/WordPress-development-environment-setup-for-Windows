@@ -407,3 +407,7 @@ How does our code sniffer looks like in Sublime? Like this
 Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers. This is a linter error. A phpcs errors look like this
 
 ![sublime code sniff php](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff2.jpg)
+
+======
+
+And that's mostly it. A short tutorial on setting up your system to be super charged for developing cool stuff in WordPress. Hope this tutorial helps :)

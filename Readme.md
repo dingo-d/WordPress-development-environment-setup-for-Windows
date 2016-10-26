@@ -15,7 +15,8 @@
 #### Disclaimer
 
 This document is meant for internal use, but if anybody stumbles upon it you can follow it and maybe you can benefit in some way. This is not anything official, and is meant as a guide to standardize the coding practices withing a company. Every developer has it's own way of doing things and this may not work for you. It works for me tho :D
-I am not responsible for any data loss or such. But really it's justa a 'tutorial' of sorts, don't see how you could mess your system up. The system I've used while testing this is Windows 10, but feel free to try anything from Windows 7 up.
+I am not responsible for any data loss or such. But really it's just a 'tutorial' of sorts, don't see how you could mess your system up. The OS I've used while testing this is Windows 10, but feel free to try anything from Windows 7 up.
+If I ever get a mac and will be forced to work on it, I'll probably have to figure out how to do this on mac as well, but for now I don't have to worry about that :D
 
 ## Prerequisites
 

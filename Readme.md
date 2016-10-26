@@ -13,7 +13,7 @@
 #### Disclaimer
 
 This document is meant for internal use, but if anybody stumbles upon it you can follow it and maybe you can benefit in some way. This is not anything official, and is meant as a guide to standardize the coding practices withing a company. Every developer has it's own way of doing things and this may not work for you. It works for me tho :D
-I am not responsible for any data loss or such. But really it's justa a 'tutorial' of sorts, don't see how you could mess your system up.
+I am not responsible for any data loss or such. But really it's justa a 'tutorial' of sorts, don't see how you could mess your system up. The system I've used while testing this is Windows 10, but feel free to try anything from Windows 7 up.
 
 ## Prerequisites
 
@@ -68,16 +68,22 @@ Restart for a good measure. You could just log off and on, but it's safer just t
 
 ### Node and linters
 
-Download and run it. After installation you can go to command prompt and type:
+Download node installation file and run it. After installation you can go to command prompt and install linters. First we'll install [csslint](https://github.com/SublimeLinter/SublimeLinter-csslint)
 
 ```
 npm install -g csslint
 ```
 
-After that install jshint
+After that install [jshint](https://github.com/SublimeLinter/SublimeLinter-jshint)
 
 ```
 npm install -g jshint
+```
+
+And we'll also need [Rhino](https://github.com/mozilla/rhino) for our jshint to work.
+
+```
+npm install -g rhino
 ```
 
 Your linters are ready to use, but we'll configure our SublimeText and code sniffer a bit later.
@@ -169,5 +175,52 @@ default_standard: WordPress
 installed_paths:  C:wpcs\
 ```
 
-Let's move on.
+Let's move on. We'll add option to show progress
 
+```
+phpcs --config-set show_progress 1
+```
+
+I wanted to add colors, but if you have Anniversary edition of Windows 10 installed, the colors in cmd prompt won't work, because MS team removed them (why they did that is a complete mistery to me).
+
+Next set the encoding
+
+```
+phpcs --config-set encoding utf-8
+```
+
+Tab width - the default tab width must be 4, and WordPress .php files must use tabs for indentations. Spaces are not allowed.
+
+```
+phpcs --config-set tab_width 4
+```
+
+Now we can set the lint paths
+
+```
+phpcs --config-set csslint_path %USERPROFILE%\AppData\Roaming\npm\node_modules\csslint
+phpcs --config-set jshint_path %USERPROFILE%\AppData\Roaming\npm\node_modules\jshint\dist\jshint.js
+phpcs --config-set rhino_path %USERPROFILE%\AppData\Roaming\npm\node_modules\rhino
+```
+
+With that, our code sniffer should be ready to use from the command prompt. But this is something we'll only use to check in the end to generate a [report](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Reporting).
+
+##### Note
+
+If you're code sniffing an entire theme it's good to specify the extensions you wish to sniff. In case of WordPress we don't need to check `.html`, `.po`, `.pot` or any image files, so you can set the valid extensions with
+
+```
+phpcs --extensions=php,js,css /path/to/code
+```
+
+Additionally you can ignore files or folders
+
+```
+phpcs --ignore=*/tests/*,*/data/* /path/to/code
+```
+
+Also some minor errors can be [automatically fixed](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically).
+
+### Setting SublimeText for development
+
+SublimeText 3 is awesome.

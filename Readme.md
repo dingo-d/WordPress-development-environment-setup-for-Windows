@@ -5,7 +5,7 @@
 1. [Microsoft Web Platform](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
 2. [Composer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#composer)
 3. [Node and linters](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#node-and-linters)
-4.[Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
+4. [Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
   1. [WordPress Coding Standards](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
 
 ======

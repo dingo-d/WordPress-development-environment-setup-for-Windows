@@ -61,6 +61,9 @@ In the cmd prompt type
 composer global require "squizlabs/php_codesniffer=*"
 ```
 
+![composer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/composer.jpg)
+
+
 ### Node.js
 
 Download and run it. After installation you can go to command prompt and type:

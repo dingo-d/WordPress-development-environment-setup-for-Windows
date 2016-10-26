@@ -402,4 +402,4 @@ How does our code sniffer looks like in Sublime? Like this
 
 ![sublime code sniff](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff.jpg)
 
-Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers.
+Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers. This is

@@ -1,5 +1,15 @@
 # WordPress development environment setup for Windows
 
+## Table of Contents
+
+1. [Microsoft Web Platform](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
+2. [Composer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#composer)
+  2.1. [Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
+  2.2. [WordPress Coding Standards](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
+3. [Node and linters](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#nodejs)
+
+======
+
 ## Prerequisites
 
 **Clean slate** - remove any xampp, composer, pear, php or anything you had on your Windows machine
@@ -51,7 +61,7 @@ This means that we have php on our Windows. Cool. Restart your computer for good
 Now that we have php we can install it from our cmd prompt. But it's easier to just download the installer and run it. So do it. It will find the php path for you. The proxy server **shouldn't** be clicked (for our purposes). Click next untill it's installed.
 Restart for a good measure. You could just log off and on, but it's safer just to restart.
 
-#### Installing php code sniffers
+#### Installing php code sniffer
 
 We want to install php code sniffer next. The best way is to follow the instructions [here](https://github.com/squizlabs/PHP_CodeSniffer).
 
@@ -63,8 +73,10 @@ composer global require "squizlabs/php_codesniffer=*"
 
 ![composer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/composer.jpg)
 
+#### WordPress Coding Standards
 
-### Node.js
+
+### Node and linters
 
 Download and run it. After installation you can go to command prompt and type:
 

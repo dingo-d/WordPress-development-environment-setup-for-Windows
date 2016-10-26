@@ -7,7 +7,7 @@
 3. [Node and linters](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#node-and-linters)
 4. [Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
   1. [WordPress Coding Standards](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
-5. [Sublime](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-sublimetext-for-development)
+5. [Sublime Settings](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-sublimetext-for-development)
 
 
 ======
@@ -227,6 +227,179 @@ phpcs --ignore=*/tests/*,*/data/* /path/to/code
 
 Also some minor errors can be [automatically fixed](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically).
 
-### Setting SublimeText for development
+### Setting up SublimeText for development
 
-SublimeText 3 is awesome.
+SublimeText 3 is awesome. What makes it awesome are all the extensions. Ones I'm using are
+
+* Alignment
+* CSS ToC
+* DeleteBlankLines
+* DocBlockr
+* Emmet
+* Emmet Css Snippets
+* Increment Selection
+* Javascript Console
+* Nodejs
+* SublimeLinter
+* SublimeLinter - csslint
+* SublimeLinter - jshint
+* SublimeLinter - phpcs
+
+The last three are the ones that are most important. For them to work we need to set it up. First of all we can look at my default settings that you can get by going to `Preference > Settings`
+
+```json
+{
+	"always_show_minimap_viewport": true,
+	"auto_upgrade": false,
+	"bold_folder_labels": false,
+	"detect_indentation": true,
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Autoprefixer",
+		"BracketHighlighter",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"material_theme_disable_fileicons": false,
+	"overlay_scroll_bars": "enabled",
+	"tab_size": 4,
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
+
+```
+
+Besides that I also have
+
+```json
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"theme": "Material-Theme-Darker.sublime-theme",
+```
+
+But you need to install [Material Theme](https://github.com/equinusocio/material-theme) first. It's up to you. Next we need to set up our linters and sniffer. I'm using linter to handle the code sniffing too. Go to `Preferences > Package Settings > SublimeLinter > User Settings` and set it up like this
+
+```json
+{
+    "user": {
+        "debug": false,
+        "delay": 0.25,
+        "error_color": "cd3227",
+        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+        "gutter_theme_excludes": [],
+        "lint_mode": "background",
+        "linters": {
+            "csslint": {
+                "@disable": false,
+                "args": [],
+                "box-sizing": false,
+                "errors": "",
+                "excludes": [],
+                "ignore": [
+                    "outline-none",
+                    "box-sizing",
+                    "ids",
+                    "adjoining-classes",
+                    "floats",
+                    "qualified-headings",
+                    "unique-headings",
+                    "important",
+                    "universal-selector",
+                    "box-model",
+                    "font-faces",
+                    "font-sizes"
+                ],
+                "warnings": ""
+            },
+            "eslint": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
+            "jscs": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
+            "jshint": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "tab_size": 4
+            },
+            "jslint": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
+            "php": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+            "phpcs": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "standard": "WordPress"
+            },
+            "pylint": {
+                "@disable": false,
+                "args": [],
+                "disable": "",
+                "enable": "",
+                "excludes": [],
+                "paths": [],
+                "rcfile": "",
+                "show-codes": false
+            }
+        },
+        "mark_style": "outline",
+        "no_column_highlights_line": false,
+        "passive_warnings": false,
+        "paths": {
+            "linux": [],
+            "osx": [],
+            "windows": []
+        },
+        "python_paths": {
+            "linux": [],
+            "osx": [],
+            "windows": []
+        },
+        "rc_search_limit": 3,
+        "shell_timeout": 10,
+        "show_errors_on_save": false,
+        "show_marks_in_minimap": true,
+        "syntax_map": {
+            "html (django)": "html",
+            "html (rails)": "html",
+            "html 5": "html",
+            "php": "html",
+            "python django": "python"
+        },
+        "warning_color": "66cc33",
+        "wrap_find": true
+    }
+}
+```
+
+You'll notice that I've set up some settings in ignore for csslint. Those are mostly warnings or 'errors' that you can safely ignore.
+
+How does our code sniffer looks like in Sublime? Like this
+
+![sublime code sniff](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff.jpg)
+
+Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers.

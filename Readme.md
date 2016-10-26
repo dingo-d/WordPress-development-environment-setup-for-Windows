@@ -1,7 +1,5 @@
 # WordPress development environment setup for Windows
 
-======
-
 ## Prerequisites
 
 **Clean slate** - remove any xampp, composer, pear, php or anything you had on your Windows machine
@@ -39,7 +37,7 @@ Install latest php version (7.0.9) for your type of Windows (x86 for 32-bit and 
 Run command prompt (cmd) and type:
 
 ```
-C:\>php -v
+php -v
 ```
 
 You should see something like this
@@ -49,3 +47,31 @@ You should see something like this
 This means that we have php on our Windows. Cool. Restart your computer for good measure.
 
 ### Composer
+
+Now that we have php we can install it from our cmd prompt. But it's easier to just download the installer and run it. So do it. It will find the php path for you. The proxy server **shouldn't** be clicked (for our purposes). Click next untill it's installed.
+Restart for a good measure. You could just log off and on, but it's safer just to restart.
+
+#### Installing php code sniffers
+
+We want to install php code sniffer next. The best way is to follow the instructions [here](https://github.com/squizlabs/PHP_CodeSniffer).
+
+In the cmd prompt type
+
+```
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+### Node.js
+
+Download and run it. After installation you can go to command prompt and type:
+
+```
+npm install -g csslint
+```
+
+After that install jshint
+
+```
+npm install -g jshint
+```
+

@@ -245,7 +245,9 @@ SublimeText 3 is awesome. What makes it awesome are all the extensions. Ones I'm
 * SublimeLinter - jshint
 * SublimeLinter - phpcs
 
-The last three are the ones that are most important. For them to work we need to set it up. First of all we can look at my default settings that you can get by going to `Preference > Settings`
+The last three are the ones that are most important. For them to work we need to set it up. Install them using Package Manager.
+
+First of all we can look at my default settings that you can get by going to `Preference > Settings`
 
 ```json
 {
@@ -396,10 +398,12 @@ But you need to install [Material Theme](https://github.com/equinusocio/material
 }
 ```
 
-You'll notice that I've set up some settings in ignore for csslint. Those are mostly warnings or 'errors' that you can safely ignore.
+You'll notice that I've set up some settings in ignore for csslint. Those are mostly warnings or 'errors' that you can safely ignore. After you've set this all up, restart the Sublime to give it a chance to load all the settings you've now set up.
 
 How does our code sniffer looks like in Sublime? Like this
 
-![sublime code sniff](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff.jpg)
+![sublime code sniff jshint](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff.jpg)
 
-Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers. This is
+Here I've purposefully removed a comma from a JavaScript code, and I immediately got an error which shows in the bottom left corner of the sublime, with red dot on the numbers. This is a linter error. A phpcs errors look like this
+
+![sublime code sniff php](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff2.jpg)

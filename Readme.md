@@ -7,6 +7,8 @@
 3. [Node and linters](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#node-and-linters)
 4. [Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
   1. [WordPress Coding Standards](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
+5. [Sublime](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-sublimetext-for-development)
+
 
 ======
 
@@ -126,10 +128,10 @@ Composer has our back on this one as well
 composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 ```
 
-This will, however, install the wpcs in C:\ root in the wpcs\ directory and code sniffer won't pick it up on itself - this one I haven't tried, but the installation mentions that just running the above command will also install PHP_CodeSniffer and register the standards, so if you didn't install code sniffer first, and just ran this command it could be that the paths will be correctly set up and you won't really need to do much. But in the case that you've installed code sniffer alone first, you'll need to manually add the installed path for the WordPress coding standards
+This will, however, install the wpcs in C:\ root in the \wpcs directory and code sniffer won't pick it up on itself - this one I haven't tried, but the installation mentions that just running the above command will also install PHP_CodeSniffer and register the standards, so if you didn't install code sniffer first, and just ran this command it could be that the paths will be correctly set up and you won't really need to do much. But in the case that you've installed code sniffer alone first, you'll need to manually add the installed path for the WordPress coding standards
 
 ```
-phpcs --config-set installed_paths C:wpcs\
+phpcs --config-set installed_paths C:wpcs
 ```
 
 After that running `phpcs -i` you should have in your cmd prompt
@@ -172,7 +174,7 @@ in my case I got out
 
 ```
 default_standard: WordPress
-installed_paths:  C:wpcs\
+installed_paths:  C:wpcs
 ```
 
 Let's move on. We'll add option to show progress
@@ -204,6 +206,10 @@ phpcs --config-set rhino_path %USERPROFILE%\AppData\Roaming\npm\node_modules\rhi
 ```
 
 With that, our code sniffer should be ready to use from the command prompt. But this is something we'll only use to check in the end to generate a [report](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Reporting).
+
+So how does it look when you run it from the command prompt? Kinda like this:
+
+![cmd sniff](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sniff_example.jpg)
 
 ##### Note
 

@@ -1,4 +1,5 @@
 # WordPress development environment setup for Windows
+
 ======
 
 ## Prerequisites
@@ -14,7 +15,8 @@ Favorite text editor \o/
 **Composer** - https://getcomposer.org/download/
 A dependency management for PHP
 
-PHP for Windows! **Microsoft Web Platform Installer** - https://www.microsoft.com/web/downloads/platform.aspx
+**Microsoft Web Platform Installer** - https://www.microsoft.com/web/downloads/platform.aspx
+PHP for Windows!
 
 ### Delete all things!
 ======
@@ -27,3 +29,5 @@ work with php. The less previous 'stuff' on your computer there is, the easier t
 ### Microsoft Web Platform ###
 
 Go to https://www.microsoft.com/web/downloads/platform.aspx and download the web platform. After installation in Search type in php, and you'll see many versions of php that you'll need to install.
+
+![web platform installer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/images/MSWebPlatform.jpg)

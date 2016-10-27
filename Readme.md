@@ -8,6 +8,8 @@
 4. [Code Sniffer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#installing-php-code-sniffer)
   1. [WordPress Coding Standards](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#microsoft-web-platform)
 5. [Sublime Settings](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-up-sublimetext-for-development)
+6. [Commit Message](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#commit-message)
+7. [Suitable Development Environment](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#suitable-development-environment)
 
 
 ======
@@ -186,10 +188,11 @@ phpcs --config-set show_progress 1
 
 I wanted to add colors, but if you have Anniversary edition of Windows 10 installed, the colors in cmd prompt won't work, because MS team removed them (why they did that is a complete mistery to me).
 
-Next set the encoding
+Next set the encoding and report format to full
 
 ```
 phpcs --config-set encoding utf-8
+phpcs --config-set report_format full
 ```
 
 Tab width - the default tab width must be 4, and WordPress .php files must use tabs for indentations. Spaces are not allowed.
@@ -240,6 +243,10 @@ SublimeText 3 is awesome. What makes it awesome are all the extensions. Ones I'm
 * Emmet Css Snippets
 * Increment Selection
 * Javascript Console
+* BracketHighlighter
+* Autoprefixer
+* PrettyJSON
+* TrailingSpaces
 * Nodejs
 * SublimeLinter
 * SublimeLinter - csslint
@@ -409,6 +416,70 @@ Here I've purposefully removed a comma from a JavaScript code, and I immediately
 
 ![sublime code sniff php](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/sublime_sniff2.jpg)
 
+### Commit Message
+
+When you're working in large groups on the same project you need to have some kind of versioning. We use gitlab. To be consistent in our commit messages the commit style should be the same. That makes it more readable and manageable.
+
+A great tutorial on how to write Git commit message was written by Chris Beams [here](http://chris.beams.io/posts/git-commit/). And if you like you can read [Pro Git](https://git-scm.com/book/en/v2).
+
+For convenience we'll be using [AngularJS Git Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) style. This is benefitial for several reasons:
+
+* We can generate Changelog.md by script
+* Allow ignoring commits by git bisect
+* Provide better information when browsing the commit history
+* Be more consistent
+
+The outline of the AngularJS commit style goes like this
+
+```
+<type>(<scope>): <subject>
+```
+
+**TYPE**: fix, feat, docs, ... (_WHAT_ am I doing?)
+
+**SCOPE**: Customize API, tinymce, image-editor, theme-settings, ... (_WHERE_ am I doing it?)
+
+**SUBJECT**: Imperative commit message (_HOW_ am I doing it?)
+
+For example:
+
+```
+fix(theme-check): Fix issues found with Theme Checker
+```
+
+Remember: commit subject must start with capital letter, no dots at the end and it must be in imperative form, that is it should fit well in this sentence
+
+If applied, this commit will __**your subject line here**__
+
+```
+If applied, this commit will __refactor subsystem X for readability__ **OK**
+If applied, this commit will __fixed bug with Y__ **NOT OK**
+```
+
+Combining that with tagging and message example will make our lives easier later on :)
+
+If you want to add custom message after the subject in CLI just add another `-m` with message text (this doesn't have to be in imperative form)
+
+```
+git commit -m "fix(theme-check): Fix issues found with Customizer API custom control" -m "I found a huge bug in custom image select picker control that broke the customizer. A semicolon was missing."
+```
+
+The best thing to do is to try and follow the simmilar rules when writing stuff in various project trackers (Asana, JIRA, etc...).
+
+### Suitable Development Environment
+
+This part is a work in progress, as I still haven't gotten around to actually install Vagrant and set it up (I will do it one day), mostly because we use server on our job, and I have bought server place where I am testing my plugins and code as well. So Vagrant and XAMPP are not that necessary at the moment. But since Vagrant is all the hype (actually it has been a hype since 2014), I will give some links that you can see and try it out. As stated on their [website](https://www.vagrantup.com/)
+
+> Vagrant is a tool for building complete development environments. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases development/production parity, and makes the "works on my machine" excuse a relic of the past.
+
+![Vagrant](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/vagrant.jpg)
+
+For WordPress development one would look into VVV or [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV), which is an open source Vagrant configuration focused on WordPress development. To use it you need to install Vagrant and [VirtualBox](https://www.virtualbox.org/wiki/Downloads). Full installation procedure can be found [here](https://github.com/Varying-Vagrant-Vagrants/VVV#installation---the-first-vagrant-up).
+
+Once you install the VVV you get [bunch of goodies](https://github.com/Varying-Vagrant-Vagrants/VVV#what-do-you-get) that you can then use as you wish. It comes with Ubuntu, WordPress Develop and Stable branch (if you want to help with core updates), WP-CLI, nginx, mysql 5.5.x, PHPUnit and much more. There is a
+
+Once I have some time I'll install it on my machine. I'll update this tutorial accordingly.
+
 ======
 
-And that's mostly it. A short tutorial on setting up your system to be super charged for developing cool stuff in WordPress. Hope this tutorial helps :)
+And that's mostly it. A short tutorial on setting up your system to be super charged for developing cool stuff in WordPress. Hope this tutorial helped :)

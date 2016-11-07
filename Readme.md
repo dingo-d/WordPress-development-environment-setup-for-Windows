@@ -100,7 +100,7 @@ We want to install php code sniffer next. The best way is to follow the instruct
 In the cmd prompt type
 
 ```
-composer global require "squizlabs/php_code sniffer=*"
+composer global require "squizlabs/php_codesniffer=*"
 ```
 
 ![composer](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows/blob/master/images/composer.jpg)

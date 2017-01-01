@@ -231,6 +231,8 @@ phpcs --ignore=*/tests/*,*/data/* /path/to/code
 
 Also some minor errors can be [automatically fixed](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically).
 
+Additionaly you can export your sniffs by specifying the `--report-file=error_file.txt`. This will export the code sniffs to the `error_file.txt`. Now if you have colors enabled, there is a big chance that the output, when opened in the Sublime or other editors will show weird symbols (something like [31mERROR[0m). This is because the ANSI colors cannot be rendered. This can be fixed by installing packages that will enable it. In the case of SublimeText you can try with [SublimeANSI](https://github.com/aziz/SublimeANSI) which works like a charm. Just install it and select the ANSI syntax.
+
 ### Setting up SublimeText for development
 
 SublimeText 3 is awesome. What makes it awesome are all the extensions. Ones I'm using are

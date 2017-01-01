@@ -468,7 +468,7 @@ The best thing to do is to try and follow the simmilar rules when writing stuff 
 
 ### Suitable Development Environment
 
-This part is a work in progress, as I still haven't gotten around to actually install Vagrant and set it up (I will do it one day), mostly because we use server on our job, and I have bought server place where I am testing my plugins and code as well. So Vagrant and XAMPP are not that necessary at the moment. But since Vagrant is all the hype (actually it has been a hype since 2014), I will give some links that you can see and try it out. As stated on their [website](https://www.vagrantup.com/)
+As stated on their [website](https://www.vagrantup.com/)
 
 > Vagrant is a tool for building complete development environments. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases development/production parity, and makes the "works on my machine" excuse a relic of the past.
 
@@ -478,7 +478,28 @@ For WordPress development one would look into VVV or [Varying Vagrant Vagrants](
 
 Once you install the VVV you get [bunch of goodies](https://github.com/Varying-Vagrant-Vagrants/VVV#what-do-you-get) that you can then use as you wish. It comes with Ubuntu, WordPress Develop and Stable branch (if you want to help with core updates), WP-CLI, nginx, mysql 5.5.x, PHPUnit and much more. There is a
 
-Once I have some time I'll install it on my machine. I'll update this tutorial accordingly.
+The best way to install it is to just follow the instructions on the VVV git page. Once you've completed it, you should be able to go to your local vagrant folder and type
+
+```
+vagrant up
+```
+
+After a while you'll have a virtual websites ready to use:
+
+http://local.wordpress.dev/ for WordPress stable
+
+http://src.wordpress-develop.dev/ for trunk WordPress development files
+
+http://build.wordpress-develop.dev/ for the version of those development files built with Grunt
+
+http://vvv.dev/ for a default dashboard containing several useful tools
+
+Another fature you might want to use is `vagrant ssh`. With it you'll have the access to the server from the local directory, and you'll be able to use code sniffer without installing it in the above way (if you want to of course).
+
+When you're done you can just type `vagrant halt`, and you'll stop the virtual machine.
+
+The best way to see what it is, is to install it and play around.
+
 
 ======
 

@@ -10,7 +10,7 @@
 5. [Sublime Settings](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-up-sublimetext-for-development)
 6. [Commit Message](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#commit-message)
 7. [Suitable Development Environment](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#suitable-development-environment)
-8. [WordPress.org Theme review](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#wporg-theme-review)
+8. [WordPress.org Theme review](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#wordpressorg-theme-review)
 
 
 ======

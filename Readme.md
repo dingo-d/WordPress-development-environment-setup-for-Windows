@@ -10,6 +10,7 @@
 5. [Sublime Settings](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#setting-up-sublimetext-for-development)
 6. [Commit Message](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#commit-message)
 7. [Suitable Development Environment](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#suitable-development-environment)
+8. [WordPress.org Theme review](https://github.com/dingo-d/WordPress-development-environment-setup-for-Windows#wporg-theme-review)
 
 
 ======
@@ -502,6 +503,12 @@ When you're done you can just type `vagrant halt`, and you'll stop the virtual m
 
 The best way to see what it is, is to install it and play around.
 
+### WordPress.org Theme review
+
+[WordPress.org theme review](https://make.wordpress.org/themes/) doesn't require all the sniffs found in `WordPress-Core` and `WordPress-Extra` rulesets. That's why you can check out their official [repository](https://github.com/WPTRT/WordPress-Coding-Standards) for additional `WordPress-Theme` ruleset. 
+It's not complete, but it's suitable for official theme reviews.
+
+In my personal projects I still use the `WordPress` ruleset, just to be on the safe side :)
 
 ======
 

@@ -508,6 +508,17 @@ The best way to see what it is, is to install it and play around.
 [WordPress.org theme review](https://make.wordpress.org/themes/) doesn't require all the sniffs found in `WordPress-Core` and `WordPress-Extra` rulesets. That's why you can check out their official [repository](https://github.com/WPTRT/WordPress-Coding-Standards) for additional `WordPress-Theme` ruleset. 
 It's not complete, but it's suitable for official theme reviews.
 
+The command I run when doing theme review is (you must be in the theme folder for this)
+
+```
+phpcs --standard=WordPress-Theme --no-colors --report-file=%path_to_desired_folder_and_file% %cd%
+```
+
+This will run phpcs with `WordPress-Theme` standard, no colors (because this makes it unreadable unless you have ANSI compliant editor), writes the sniffs in the report file that you've specified. I usually write them to my Desktop `C:\Users\me\Desktop\phpcs_sniffs.txt`, and `%cd%` points to the current folder to sniff in.
+
+You can tweak this to your liking of course.
+
+
 In my personal projects I still use the `WordPress` ruleset, just to be on the safe side :)
 
 ======

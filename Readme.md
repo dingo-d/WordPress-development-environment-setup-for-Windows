@@ -518,6 +518,13 @@ This will run phpcs with `WordPress-Theme` standard, no colors (because this mak
 
 You can tweak this to your liking of course.
 
+#### PHPCS plugin 
+
+Nilambar Sharma made a great phpcs plugin for theme reviews, that eliminates the need for installing code sniffer if you want to check your theme. You can get it here: https://github.com/ernilambar/ns-theme-check
+
+This will check your theme through `WordPress-Theme` sniffs, just download [zip](https://github.com/ernilambar/ns-theme-check/releases) file and install it as a plugin.
+Just know that `WordPress-Theme` sniffs are still work in progress, so there may be some sniffs that go unreported, but that should be fixed in time. I really recommend this for theme developers.
+
 
 In my personal projects I still use the `WordPress` ruleset, just to be on the safe side :)
 

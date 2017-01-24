@@ -350,62 +350,153 @@ But you need to install [Material Theme](https://github.com/equinusocio/material
                 "@disable": false,
                 "args": [],
                 "excludes": [],
-                "tab_size": 4
-            },
-            "jslint": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "php": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "phpcs": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "standard": "WordPress"
-            },
-            "pylint": {
-                "@disable": false,
-                "args": [],
-                "disable": "",
-                "enable": "",
-                "excludes": [],
-                "paths": [],
-                "rcfile": "",
-                "show-codes": false
-            }
-        },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": false,
-        "paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
-        },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
-        },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "html (django)": "html",
-            "html (rails)": "html",
-            "html 5": "html",
-            "php": "html",
-            "python django": "python"
-        },
-        "warning_color": "66cc33",
-        "wrap_find": true
-    }
+  	    "jshint": {
+				"@disable": false,
+				"args": [],
+				"excludes": [],
+				"tab_size": 4,
+				"boss": true,
+				"curly": true,
+				"eqeqeq": true,
+				"eqnull": true,
+				"es3": true,
+				"expr": true,
+				"immed": true,
+				"noarg": true,
+				"nonbsp": true,
+				"onevar": true,
+				"quotmark": "single",
+				"trailing": true,
+				"undef": true,
+				"unused": true,
+
+				"browser": true,
+
+{
+	"user": {
+		"debug": false,
+		"delay": 0.25,
+		"error_color": "cd3227",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+		"gutter_theme_excludes": [],
+		"lint_mode": "background",
+		"linters": {
+			"csslint": {
+				"@disable": false,
+				"args": [],
+				"box-sizing": false,
+				"errors": "",
+				"excludes": [],
+				"ignore": [
+					"outline-none",
+					"box-sizing",
+					"ids",
+					"adjoining-classes",
+					"floats",
+					"qualified-headings",
+					"unique-headings",
+					"important",
+					"universal-selector",
+					"box-model",
+					"font-faces",
+					"font-sizes"
+				],
+				"warnings": ""
+			},
+			"eslint": {
+				"@disable": true,
+				"args": [],
+				"excludes": []
+			},
+			"jscs": {
+				"@disable": true,
+				"args": [],
+				"excludes": []
+			},
+			"jshint": {
+				"@disable": false,
+				"args": [],
+				"excludes": [],
+				"tab_size": 4,
+				"boss": true,
+				"curly": true,
+				"eqeqeq": true,
+				"eqnull": true,
+				"es3": true,
+				"expr": true,
+				"immed": true,
+				"noarg": true,
+				"nonbsp": true,
+				"onevar": true,
+				"quotmark": "single",
+				"trailing": true,
+				"undef": true,
+				"unused": true,
+
+				"browser": true,
+
+				"globals": {
+					"_": false,
+					"Backbone": false,
+					"jQuery": false,
+					"JSON": false,
+					"wp": false
+				}
+			},
+			"jslint": {
+				"@disable": true,
+				"args": [],
+				"excludes": []
+			},
+			"php": {
+				"@disable": true,
+				"args": [],
+				"excludes": []
+			},
+			"phpcs": {
+				"@disable": false,
+				"args": [],
+				"excludes": [],
+				"standard": "WordPress"
+			},
+			"pylint": {
+				"@disable": true,
+				"args": [],
+				"disable": "",
+				"enable": "",
+				"excludes": [],
+				"paths": [],
+				"rcfile": "",
+				"show-codes": false
+			}
+		},
+		"mark_style": "outline",
+		"no_column_highlights_line": false,
+		"passive_warnings": false,
+		"paths": {
+			"linux": [],
+			"osx": [],
+			"windows": []
+		},
+		"python_paths": {
+			"linux": [],
+			"osx": [],
+			"windows": []
+		},
+		"rc_search_limit": 3,
+		"shell_timeout": 10,
+		"show_errors_on_save": false,
+		"show_marks_in_minimap": true,
+		"syntax_map": {
+			"html (django)": "html",
+			"html (rails)": "html",
+			"html 5": "html",
+			"php": "html",
+			"python django": "python"
+		},
+		"warning_color": "66cc33",
+		"wrap_find": true
+	}
 }
 ```
 
